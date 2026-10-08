@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "城市摆拍 beta",
+  "version": "0.7.7",
+  "description": "在开源城市时空社区调整镜头与机位，并在本地保存和分享。",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mwsk.sensetime-inc.com/city-scene/*"
+      ],
+      "js": [
+        "probe.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://mwsk.sensetime-inc.com/*"
+      ],
+      "js": [
+        "camera-codec.js",
+        "panel.js"
+      ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ]
+}
