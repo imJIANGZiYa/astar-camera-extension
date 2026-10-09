@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" role="img" aria-labelledby="title">
+  <title id="title">城市摆拍</title>
+  <g fill="none" stroke="#123f43" stroke-width="5" stroke-linecap="round">
+    <path d="M4 17V4h13M51 4h13v13M4 47v13h13M51 60h13V47"/>
+  </g>
+  <g fill="#123f43"><path d="M15 53V35h9v18zM28 53V25h10v28zM42 53V32h11v21z"/></g>
+  <circle cx="45" cy="17" r="7" fill="#efa45e"/>
+  <text x="77" y="43" fill="#123f43" font-family="Microsoft YaHei,Arial,sans-serif" font-size="29" font-weight="600">城市摆拍</text>
+</svg>
