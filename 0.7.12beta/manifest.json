@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "城市摆拍 beta",
+  "version": "0.7.12",
+  "description": "基于 0.7.7，整合日月轨迹、全画幅镜头模拟与可恢复机位的图片分享。",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mwsk.sensetime-inc.com/city-scene/*"
+      ],
+      "js": [
+        "probe.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://mwsk.sensetime-inc.com/*"
+      ],
+      "js": [
+        "vendor/suncalc.js",
+        "celestial.js",
+        "camera-codec.js",
+        "vendor/qrcode.js",
+        "vendor/jsQR.js",
+        "share-image.js",
+        "panel.js"
+      ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ]
+}
